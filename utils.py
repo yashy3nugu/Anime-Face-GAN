@@ -6,14 +6,17 @@ import matplotlib.pyplot as plt
 import tensorflow as tf
 from tensorflow import keras
 
-class Save_images(keras.callbacks.Callback):
-
-    def __init__(self,noise,PREVIEW_MARGIN,PREVIEW_ROWS,PREVIEW_COLS,generator,**kwargs):
+class save_images(keras.callbacks.Callback):
+"""
+Generates a grid image with PREVIEW_ROWS*PREVIEW_COLS of generated images every epoch with PREVIEW_MARGIN
+spacing in between
+"""
+    def __init__(self,noise,preview_margin,preview_rows,preview_cols,generator,**kwargs):
         super(keras.callbacks.Callback,self).__init__(**kwargs)
         self.noise = noise
-        self.preview_margin = PREVIEW_MARGIN
-        self.preview_rows = PREVIEW_ROWS
-        self.preview_cols = PREVIEW_COLS
+        self.preview_margin = preview_margin
+        self.preview_rows = preview_rows
+        self.preview_cols = preview_cols
         self.generator = generator
 
     def on_epoch_end(self, epoch, logs=None):
