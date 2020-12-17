@@ -11,13 +11,12 @@ spacing in between
 """
 class save_images(keras.callbacks.Callback):
 
-    def __init__(self,noise,preview_margin,preview_rows,preview_cols,generator,**kwargs):
+    def __init__(self,noise,preview_margin,preview_rows,preview_cols,**kwargs):
         super(keras.callbacks.Callback,self).__init__(**kwargs)
         self.noise = noise
         self.preview_margin = preview_margin
         self.preview_rows = preview_rows
         self.preview_cols = preview_cols
-        self.generator = generator
 
     def on_epoch_end(self, epoch, logs=None):
         image_array = np.full((
@@ -25,7 +24,7 @@ class save_images(keras.callbacks.Callback):
             self.preview_margin + (self.preview_cols * (64 + self.preview_margin)), 3),
             255, dtype=np.uint8)
 
-        generated_images = self.generator.predict(self.noise)
+        generated_images = self.model.generator.predict(self.noise)
 
         generated_images = 0.5 * generated_images + 0.5
 
