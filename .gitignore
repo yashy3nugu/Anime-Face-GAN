@@ -129,3 +129,6 @@ data/
 
 # Epoch images
 Epoch_images/
+
+# Weights
+Weights/
