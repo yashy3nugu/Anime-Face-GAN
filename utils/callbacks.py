@@ -5,12 +5,12 @@ import matplotlib.pyplot as plt
 
 import tensorflow as tf
 from tensorflow import keras
-
-class save_images(keras.callbacks.Callback):
 """
 Generates a grid image with PREVIEW_ROWS*PREVIEW_COLS of generated images every epoch with PREVIEW_MARGIN
 spacing in between
 """
+class save_images(keras.callbacks.Callback):
+
     def __init__(self,noise,preview_margin,preview_rows,preview_cols,generator,**kwargs):
         super(keras.callbacks.Callback,self).__init__(**kwargs)
         self.noise = noise
