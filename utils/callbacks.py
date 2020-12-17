@@ -44,3 +44,11 @@ class save_images(keras.callbacks.Callback):
         filename = os.path.join(output_path, f"train-{epoch}.png")
         im = Image.fromarray(image_array)
         im.save(filename)
+
+
+class checkpoint_callback(keras.callbacks.Callback):
+    def __init__(self,**kwargs):
+        super(keras.callbacks.Callback, self).__init__(**kwargs)
+    def on_epoch_end(self, epoch, logs=None):
+        self.model.generator.save_weights("Weights/generator_weights.h5")
+        self.model.discriminator.save_weights("Weights/discriminator_weights.h5")
