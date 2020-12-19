@@ -40,7 +40,7 @@ class save_images(keras.callbacks.Callback):
         if not os.path.exists(output_path):
             os.makedirs(output_path)
 
-        filename = os.path.join(output_path, f"train-{epoch}.png")
+        filename = os.path.join(output_path, f"train-{epoch+1}.png")
         im = Image.fromarray(image_array)
         im.save(filename)
 
