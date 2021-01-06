@@ -20,10 +20,12 @@ The architecture is inspired by the original DCGAN paper. However 'one-sided lab
 The generator takes in a 128 dimensional noise vector sampled from a normal distribution of zero mean and unit variance N(0,1).
 It is then followed by a Dense layer of 4x4x1024 units and reshaped to (4,4,1024).  
 Then a few transposed convolutional layers are followed which then results in an image of size (64,64,3) with pixel values of the range [-1,1]
-due to a tanh activation.
+due to a tanh activation.  
+<img src="assets/generator-model.png" width=40%>
 
 ### Discriminator
-The discriminator is similar to a image classification CNN which takes in an image and outputs the probability of it being real.
+The discriminator is similar to a image classification CNN which takes in an image and outputs the probability of it being real.  
+<img src="assets/discriminator-model.png" width=40%>
 
 # Acknowledgements
 - The original DCGAN research paper https://arxiv.org/abs/1511.06434
