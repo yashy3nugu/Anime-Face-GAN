@@ -1,5 +1,6 @@
 # Anime-Face-GAN
-Generating anime faces using a Deep Convolutional Generative Adversarial Network (DCGAN)
+Generating anime faces using a Deep Convolutional Generative Adversarial Network (DCGAN).  
+<img src="assets/generated-images.jpg" height=50% width=50%>  
 
 # Dataset used
 The dataset is taken from Kaggle over [here](https://www.kaggle.com/soumikrakshit/anime-faces). The data was obtained from www.getchu.com and processed using a face
