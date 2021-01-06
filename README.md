@@ -27,6 +27,9 @@ due to a tanh activation.
 The discriminator is similar to a image classification CNN which takes in an image and outputs the probability of it being real.  
 <img src="assets/discriminator-model.png" width=40%>
 
+# Progress
+<img src="assets/training-progress.gif">
+
 # Acknowledgements
 - The original DCGAN research paper https://arxiv.org/abs/1511.06434
 - Tip for label smoothing https://towardsdatascience.com/gan-ways-to-improve-gan-performance-acf37f9f59b
