@@ -33,6 +33,23 @@ The discriminator is similar to a image classification CNN which takes in an ima
 # Progress
 <img src="assets/training-progress.gif">
 
+# Requirements ✅
+- ###### python 3.8.5
+- ###### Anaconda 4.9.2+
+
+Note: for running on a GPU instance you will require to download the respective CUDA and cuDNN (if the GPU present is CUDA compatible) versions to work with tensorflow.
+CUDA compatibility can be checked [here](https://developer.nvidia.com/cuda-gpus)
+
+# Instructions 📝 (For testing on CPU)
+- Clone the repository
+- Download the dataset from [here](https://www.kaggle.com/soumikrakshit/anime-faces) into the same directory as the cloned repo
+- Open anaconda prompt and cd into the repo
+- Run [`conda env create -f environment.yml`](#code)
+- Run [`jupyter notebook`](#code) and make sure you are using the kernel 'tensorflow-cpu'
+- Run the notebook `GAN.ipynb`
+
+Note: It is advised to train the model on a GPU. Training on a CPU can be time consuming.
+
 # Acknowledgements
 - The original DCGAN research paper https://arxiv.org/abs/1511.06434
 - Tip for label smoothing https://towardsdatascience.com/gan-ways-to-improve-gan-performance-acf37f9f59b
