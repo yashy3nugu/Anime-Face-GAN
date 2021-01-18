@@ -50,7 +50,7 @@ CUDA compatibility can be checked [here](https://developer.nvidia.com/cuda-gpus)
 - Open anaconda prompt and cd into the repo
 - Run `conda env create -f environment.yml`
 - Run `jupyter notebook` and make sure you are using the kernel 'tensorflow-cpu'
-- Run the notebook `GAN.ipynb`
+- Run the notebook `DCGAN.ipynb`
 
 Note: It is advised to train the model on a GPU. Training on a CPU can be time consuming.
 
