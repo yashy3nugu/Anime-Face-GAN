@@ -48,7 +48,8 @@ CUDA compatibility can be checked [here](https://developer.nvidia.com/cuda-gpus)
 
 # Instructions 📝 (For testing on CPU)
 - Clone the repository
-- Download the dataset from [here](https://www.kaggle.com/soumikrakshit/anime-faces) into the same directory as the cloned repo
+- Download the dataset from [here](https://www.kaggle.com/soumikrakshit/anime-faces) into the same directory as the cloned repo (only required if training from scratch)
+- Download the trained weights from [here](https://drive.google.com/drive/folders/1WesJlksOcDhGqwtNJhHKZhN1ehJtZZt4?usp=sharing) for testing
 - Open anaconda prompt and cd into the repo
 - Run `conda env create -f environment.yml`
 - Run `jupyter notebook` and make sure you are using the kernel 'tensorflow-cpu'
