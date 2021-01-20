@@ -42,10 +42,11 @@ class save_images(keras.callbacks.Callback):
 
         # Generate num_rows*num_cols number of images using the generator model
         generated_images = self.model.generator.predict(self.noise)
-        generated_images = 0.5 * generated_images + 0.5 # Convert pixel intensities to the range [0,1]
-        """The images need not be converted into the typical [0,255] pixel intensity values because
-            the PIL Image module accepts the range [0,1] 
-        """
+
+        # Convert pixel intensities to the range [0,1]
+        generated_images = 0.5 * generated_images + 0.5
+
+        #The images need not be converted into the typical [0,255] pixel intensity values because the PIL Image module accepts the range [0,1] 
 
 
         image_count = 0
