@@ -8,8 +8,6 @@ The dataset is taken from Kaggle over [here](https://www.kaggle.com/soumikrakshi
 detector based on the repo https://github.com/nagadomi/lbpcascade_animeface.
 The dataset contains images of size 64 by 64 pixels.
 
-(add dataset image)
-
 # Objective 🎯
 - The objective of the project is to generate images of Anime faces using a Deep Convolutional GAN.
 - The DCGAN has two networks, the 'generator' and the 'discriminator'.  
