@@ -22,16 +22,15 @@ class save_images(keras.callbacks.Callback):
     # overwriting on_epoch_end() helps in executing a custom method when an epoch ends
     def on_epoch_end(self, epoch, logs=None):
         """
+        Saves images generated from a fixed random vector by the generator to the disk 
         
-        Input:
+        Parameters:
             noise: fixed noise vector from a normal distribution to be fed to the generator.
-            num_rows: int, specify number of rows of images
-            num_cols: int, specify number of columns of images
-            margin: int, specify margin between images
+            num_rows: number of rows of images
+            num_cols: number of columns of images
+            margin: margin between images
             generator: keras model representing the generator network
         
-        Output:
-            image containing a grid of num_rows*num_cols images to check generator progress
         """
 
         # Generate a base array upon which images can then be added sequentially
@@ -46,7 +45,7 @@ class save_images(keras.callbacks.Callback):
         # Convert pixel intensities to the range [0,1]
         generated_images = 0.5 * generated_images + 0.5
 
-        #The images need not be converted into the typical [0,255] pixel intensity values because the PIL Image module accepts the range [0,1] 
+        #Images need not be converted into the typical [0,255] pixel intensity values because the PIL Image module accepts the range [0,1] 
 
 
         image_count = 0
@@ -68,8 +67,10 @@ class save_images(keras.callbacks.Callback):
         im.save(filename)
 
 
-# This is a callback which saves/updates the generator and discriminator weights every epoch in a .h5 format
 class checkpoint_callback(keras.callbacks.Callback):
+    """
+    Subclass of keras.callbacks.Callback to save the weights every epoch in a .h5 file
+    """
     def __init__(self,**kwargs):
         super(keras.callbacks.Callback, self).__init__(**kwargs)
     def on_epoch_end(self, epoch, logs=None):
