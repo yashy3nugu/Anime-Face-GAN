@@ -49,9 +49,9 @@ CUDA compatibility can be checked [here](https://developer.nvidia.com/cuda-gpus)
 - Download the dataset from [here](https://www.kaggle.com/soumikrakshit/anime-faces) into the same directory as the cloned repo (only required if training from scratch)
 - Download the trained weights from [here](https://drive.google.com/drive/folders/1WesJlksOcDhGqwtNJhHKZhN1ehJtZZt4?usp=sharing) for testing
 - Open anaconda prompt and cd into the repo
-- Run `conda env create -f environment.yml`
-- Run `python -m ipykernel install --user --name=DCGAN` to list it in the jupyter notebook's kernels. (Run `conda install -c anaconda ipykernel` in case ipykernel not installed) 
+- Run `conda env create -f environment.yml` 
 - Run `conda activate DCGAN`
+- Run `python -m ipykernel install --user --name=DCGAN` to list it in the jupyter notebook's kernels. (Run `conda install -c anaconda ipykernel` in case ipykernel not installed)
 - Run `jupyter notebook` and make sure you are using the kernel 'DCGAN'
 - Run the notebook `DCGAN.ipynb`
 
